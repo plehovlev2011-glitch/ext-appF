@@ -6,12 +6,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
-      external: [/^figma:asset\/.+/]
-    }
-  },
-  resolve: {
-    alias: {
-      'motion/react': 'framer-motion'
+      external: [/^figma:asset\/.+/, /^motion\/react/]
     }
   }
 })
