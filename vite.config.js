@@ -4,13 +4,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      external: ['motion/react']
-    }
+    outDir: 'dist'
   },
   publicDir: 'public',
-  optimizeDeps: {
-    include: ['framer-motion']
+  resolve: {
+    alias: {
+      'motion/react': 'framer-motion'
+    }
   }
 })
