@@ -1,0 +1,536 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+/* Figma Import Styles for Group1 (Lunch Card) */
+.css-j9f0op {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #FF0000;
+  border-radius: 20px;
+  padding: 24px;
+  gap: 16px;
+}
+
+.css-vf8mzy {
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.css-61y1s7 {
+  position: absolute;
+  background-color: white;
+  border-radius: 999px;
+  width: 100%;
+  height: 40%;
+  top: 8%;
+}
+
+.css-bc1d1i {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.css-j45cbg {
+  transform: scaleX(1.8);
+}
+
+.css-bbmv0m {
+  position: absolute;
+  background-color: white;
+  border-radius: 999px;
+  width: 100%;
+  height: 20%;
+  bottom: 8%;
+}
+
+.css-dif40j {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.css-ntqiz5 {
+  transform: scaleX(2);
+}
+
+.css-4ea44u {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-baulaq {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-ci5bdx {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-eq72tv {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-ufbs9f {
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-6mbvks {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-d07lh9 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-nky2wt {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-jsddlm {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-4ggvy4 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-w49het {
+  width: 100%;
+  aspect-ratio: 2.5;
+}
+
+.css-roiesn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.css-gs60ek {
+  width: 100%;
+  height: 100%;
+}
+
+.css-wixxpz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.css-3yrxng {
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+  grid-column: 1 / -1;
+}
+
+.css-g53zeq {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.css-i56x7w {
+  margin-top: 16px;
+}
+
+.css-8jchzs {
+  color: black;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.css-8zr56v {
+  color: black;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.css-x78r3n {
+  margin: 0;
+}
+
+.css-168s0y {
+  position: absolute;
+  right: 8%;
+  bottom: 38%;
+  font-size: 32px;
+  color: black;
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.css-ckykaz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.css-tzn6qh {
+  margin: 0;
+}
+
+.css-u7rz4k {
+  font-weight: bold;
+}
+
+/* Additional Figma Import Styles from Group1-45-23 */
+.css-eijyp {
+  position: relative;
+  border-radius: 9999px;
+}
+
+.css-gmujn0 {
+  background-color: #FF0000;
+  padding: 24px;
+}
+
+.css-vhxkox {
+  margin-bottom: 16px;
+}
+
+.css-gz3nwl {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+.css-8g1e6h {
+  background-color: #FF0000;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.css-qihull {
+  background-color: #FF0000;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+.css-al5d76 {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.css-ybmraw {
+  background-color: white;
+  padding: 16px;
+}
+
+.css-5n09jl {
+  background-color: white;
+  padding: 20px;
+}
+
+.css-h0vm2r {
+  background-color: white;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.css-ggwoeh {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: white;
+  border: 2px solid #666;
+  border-radius: 9999px;
+}
+
+.css-s3s1qq {
+  text-align: center;
+  font-size: 16px;
+}
+
+.css-u5zktz {
+  color: #666;
+}
+
+.css-6sikxp {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.css-xbpyxw {
+  text-align: center;
+}
+
+.css-pdar1e {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.css-we1teg {
+  color: black;
+  margin-bottom: 16px;
+}
+
+.css-d7sobu {
+  background-color: white;
+  color: #FF0000;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.css-d3k24y {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.css-v6db0e {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.css-4ihjiy {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.css-bwe5gb {
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.css-hojlwz {
+  color: #FF0000;
+  font-size: 16px;
+}
+
+.css-w081n1 {
+  color: #FF0000;
+  font-size: 16px;
+}
+
+.css-72ekn1 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
