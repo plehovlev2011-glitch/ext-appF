@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 import { User, Camera } from 'lucide-react';
 import { NavigationBar } from './NavigationBar';
 import { TopNavBar } from './TopNavBar';
