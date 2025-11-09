@@ -6,7 +6,6 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
-  publicDir: 'public',
   resolve: {
     alias: {
       'motion/react': 'framer-motion'
